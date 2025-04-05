@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.bg-gradient {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+.head {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    color: white;
+}
+
+.head h2 {
+    font-size: 28px;
+    background-color: #e66110;
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: 0px 0px 20px #db6217;
+    animation: glow 4s infinite;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px #db6217; }
+    50% { box-shadow: 0 0 20px #db6217, 0 0 30px #db6217; }
+    100% { box-shadow: 0 0 10px #db6217; }
+}
+
+.btn1 {
+    font-size: 18px;
+    padding: 8px 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 20px;
+    padding: 10px;
+}
+.dflt-head{
+  margin: 38px;
+}
+
+.img-con, .card {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.api-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    outline: 2px solid white;
+}
+
+.icn-con {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.icn {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.disabled{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.gen {
+    background-color: #f3f7fe;
+    color: #db6217;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 120px;
+    height: 50px;
+    font-size: 18px;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.gen:hover {
+    background-color: #e67a37;
+    box-shadow: 0 0 10px #fc8e4a;
+    color: #fff;
+}
+
+.card {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px #ffffff;
+}
+
+.bg {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    background: rgba(255, 255, 255, .95);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    outline: 2px solid white;
+}
+
+#typing-text::after {
+    content: "|";
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .head {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .head h2 {
+        font-size: 24px;
+        padding: 8px 12px;
+    }
+
+    .btn1 {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-con, .card {
+        width: 90%;
+    }
+
+    .gen {
+        width: 100%;
+        max-width: 200px;
+        font-size: 16px;
+    }
+
+    .icn-con {
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .icn {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .head h2 {
+        font-size: 22px;
+    }
+
+    .btn1 {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .gen {
+        width: 100%;
+        max-width: 180px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .icn {
+        width: 30px;
+        height: 30px;
+    }
+}
+/* From Uiverse.io by Nawsome */ 
+.loadingspinner {
+    --square: 26px;
+    --offset: 30px;
+    --duration: 2.4s;
+    --delay: 0.2s;
+    --timing-function: ease-in-out;
+    --in-duration: 0.4s;
+    --in-delay: 0.1s;
+    --in-timing-function: ease-out;
+    width: calc( 3 * var(--offset) + var(--square));
+    height: calc( 2 * var(--offset) + var(--square));
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    position: absolute;
+    display: none;
+  }
+  
+  .loadingspinner div {
+    display: inline-block;
+    background: darkorange;
+      /*background: var(--text-color);*/
+      /*box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);*/
+    border: none;
+    border-radius: 2px;
+    width: var(--square);
+    height: var(--square);
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    font-size: 6pt;
+    color: black;
+  }
+  
+  .loadingspinner #square1 {
+    left: calc( 0 * var(--offset) );
+    top: calc( 0 * var(--offset) );
+    animation: square1 var(--duration) var(--delay) var(--timing-function) infinite,
+                 squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
+  }
+  
+  .loadingspinner #square2 {
+    left: calc( 0 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+    animation: square2 var(--duration) var(--delay) var(--timing-function) infinite,
+                squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
+  }
+  
+  .loadingspinner #square3 {
+    left: calc( 1 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+    animation: square3 var(--duration) var(--delay) var(--timing-function) infinite,
+                 squarefadein var(--in-duration) calc(2 * var(--in-delay)) var(--in-timing-function) both;
+  }
+  
+  .loadingspinner #square4 {
+    left: calc( 2 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+    animation: square4 var(--duration) var(--delay) var(--timing-function) infinite,
+                 squarefadein var(--in-duration) calc(3 * var(--in-delay)) var(--in-timing-function) both;
+  }
+  
+  .loadingspinner #square5 {
+    left: calc( 3 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+    animation: square5 var(--duration) var(--delay) var(--timing-function) infinite,
+                 squarefadein var(--in-duration) calc(4 * var(--in-delay)) var(--in-timing-function) both;
+  }
+  
+  @keyframes square1 {
+    0% {
+      left: calc( 0 * var(--offset) );
+      top: calc( 0 * var(--offset) );
+    }
+  
+    8.333% {
+      left: calc( 0 * var(--offset) );
+      top: calc( 1 * var(--offset) );
+    }
+  
+    100% {
+      left: calc( 0 * var(--offset) );
+      top: calc( 1 * var(--offset) );
+    }
+  }
+  
+  @keyframes square2 {
+    0% {
+      left: calc( 0 * var(--offset) );
+      top: calc( 1 * var(--offset) );
+    }
+  
+    8.333% {
+      left: calc( 0 * var(--offset) );
+      top: calc( 2 * var(--offset) );
+    }
+  
+    16.67% {
+      left: calc( 1 * var(--offset) );
+      top: calc( 2 * var(--offset) );
+    }
+  
+    25.00% {
+      left: calc( 1 * var(--offset) );
+      top: calc( 1 * var(--offset) );
+    }
+  
+    83.33% {
+      left: calc( 1 * var(--offset) );
+      top: calc( 1 * var(--offset) );
+    }
+  
+    91.67% {
+      left: calc( 1 * var(--offset) );
+      top: calc( 0 * var(--offset) );
+    }
+  
+    100% {
+      left: calc( 0 * var(--offset) );
+      top: calc( 0 * var(--offset) );
+    }
+  }
+  
+  @keyframes square3 {
+    0%,100% {
+      left: calc( 1 * var(--offset) );
+      top: calc( 1 * var(--offset) );
+    }
+  
+    16.67% {
+      left: calc( 1 * var(--offset) );
+      top: calc( 1 * var(--offset) );
+    }
+  
+    25.00% {
+      left: calc( 1 * var(--offset) );
+      top: calc( 0 * var(--offset) );
+    }
+  
+    33.33% {
+      left: calc( 2 * var(--offset) );
+      top: calc( 0 * var(--offset) );
+    }
+  
+    41.67% {
+      left: calc( 2 * var(--offset) );
+      top: calc( 1 * var(--offset) );
+    }
+  
+    66.67% {
+      left: calc( 2 * var(--offset) );
+      top: calc( 1 * var(--offset) );
+    }
+  
+    75.00% {
+      left: calc( 2 * var(--offset) );
+      top: calc( 2 * var(--offset) );
+    }
+  
+    83.33% {
+      left: calc( 1 * var(--offset) );
+      top: calc( 2 * var(--offset) );
+    }
+  
+    91.67% {
+      left: calc( 1 * var(--offset) );
+      top: calc( 1 * var(--offset) );
+    }
+  }
+  
+  @keyframes square4 {
+    0% {
+      left: calc( 2 * var(--offset) );
+      top: calc( 1 * var(--offset) );
+    }
+  
+    33.33% {
+      left: calc( 2 * var(--offset) );
+      top: calc( 1 * var(--offset) );
+    }
+  
+    41.67% {
+      left: calc( 2 * var(--offset) );
+      top: calc( 2 * var(--offset) );
+    }
+  
+    50.00% {
+      left: calc( 3 * var(--offset) );
+      top: calc( 2 * var(--offset) );
+    }
+  
+    58.33% {
+      left: calc( 3 * var(--offset) );
+      top: calc( 1 * var(--offset) );
+    }
+  
+    100% {
+      left: calc( 3 * var(--offset) );
+      top: calc( 1 * var(--offset) );
+    }
+  }
+  
+  @keyframes square5 {
+    0% {
+      left: calc( 3 * var(--offset) );
+      top: calc( 1 * var(--offset) );
+    }
+  
+    50.00% {
+      left: calc( 3 * var(--offset) );
+      top: calc( 1 * var(--offset) );
+    }
+  
+    58.33% {
+      left: calc( 3 * var(--offset) );
+      top: calc( 0 * var(--offset) );
+    }
+  
+    66.67% {
+      left: calc( 2 * var(--offset) );
+      top: calc( 0 * var(--offset) );
+    }
+  
+    75.00% {
+      left: calc( 2 * var(--offset) );
+      top: calc( 1 * var(--offset) );
+    }
+  
+    100% {
+      left: calc( 2 * var(--offset) );
+      top: calc( 1 * var(--offset) );
+    }
+  }
+  
+  @keyframes squarefadein {
+    0% {
+      transform: scale(0.75);
+      opacity: 0.0;
+    }
+  
+    100% {
+      transform: scale(1.0);
+      opacity: 1.0;
+    }
+  }
