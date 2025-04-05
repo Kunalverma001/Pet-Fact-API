@@ -14,12 +14,6 @@ Welcome to **Pet&Fact API** – a fun and simple API that fetches random images 
 
 ---
 
-## 🚀 Live Demo
-
-> Coming Soon or [Your Deployed Link Here]
-
----
-
 ## 🛠️ Tech Stack
 
 - **Frontend**: (If you have one) HTML, CSS, JavaScript  
@@ -55,7 +49,7 @@ Welcome to **Pet&Fact API** – a fun and simple API that fetches random images 
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/yourusername/pet-fact-api.git
+git clone https://github.com/Kunalverma001/pet-fact-api.git
 cd pet-fact-api
 npm install
 npm start
@@ -92,4 +86,4 @@ Pull requests are welcome! If you’d like to add features or fix bugs, feel fre
 
 ## 🙋‍♂️ Author
 
-- [Your Name](https://github.com/yourusername)
+- Kunalverma001 (https://github.com/Kunalverma001)
